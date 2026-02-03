@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte de Notas UTP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        @media print { .no-print { display: none; } }
+        .utp-font { font-family: 'Arial', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-200 p-4 utp-font">
+    <div class="max-w-4xl mx-auto">
+        <div class="no-print bg-white p-6 rounded shadow mb-6">
+            <h1 class="text-xl font-bold text-red-700">Visualizador de Notas Estático</h1>
+            <p class="text-sm text-gray-600">Editando el archivo <b>cursos.json</b> se actualiza esta lista.</p>
+            <button onclick="generarpdf()" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 w-full font-bold">
+                Descargar PDF como el original
+            </button>
+        </div>
+
+        <div id="reporte" class="bg-white p-10 shadow-lg min-h-[1100px] relative">
+            <div class="flex justify-between items-start border-b-2 border-gray-100 pb-4 mb-6">
+                <div>
+                    <h2 class="text-lg font-bold text-gray-800">UTP+ Portal | Universidad Tecnológica del Perú</h2>
+                    <p class="text-gray-600">Periodo: 2025 - Ciclo 1 Marzo</p>
+                </div>
+                <div class="text-right text-xs text-gray-500">
+                    <p id="fechahora"></p>
+                    <p>https://portal.utp.edu.pe/cursos/mis-cursos</p>
+                </div>
+            </div>
+
+            <div id="contenidocursos">
+                </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

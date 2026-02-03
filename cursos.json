@@ -1,0 +1,38 @@
+[
+  {
+    "nombre": "Inglés III (1N051)",
+    "promedio": 14,
+    "modalidad": "Virtual 24/7",
+    "horario": "Disponible 24/7 por UTP+ Class",
+    "horas": 3.0,
+    "creditos": 3.00,
+    "seccion": "17738"
+  },
+  {
+    "nombre": "Matemática I (1X104)",
+    "promedio": 14,
+    "modalidad": "Presencial",
+    "horario": "Miércoles: 14:30-16:45, Viernes: 14:00-15:30",
+    "horas": 5.0,
+    "creditos": 5.00,
+    "seccion": "50305"
+  },
+  {
+    "nombre": "Problemas y desafíos en el perú actual II (1A17E)",
+    "promedio": 17,
+    "modalidad": "Virtual 24/7",
+    "horario": "Disponible 24/7 por UTP+ Class",
+    "horas": 3.0,
+    "creditos": 3.00,
+    "seccion": "53234"
+  },
+  {
+    "nombre": "Química general II (1Q01G)",
+    "promedio": 13,
+    "modalidad": "Presencial",
+    "horario": "Miércoles y Viernes: 12:15-13:45",
+    "horas": 3.4,
+    "creditos": 2.72,
+    "seccion": "15382"
+  }
+]

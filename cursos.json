@@ -1,38 +1,47 @@
 [
   {
-    "nombre": "Inglés III (1N051)",
-    "promedio": 14,
+    "nombre": "Inglés 4 (1N08I)",
+    "promedio": 15,
     "modalidad": "Virtual 24/7",
     "horario": "Disponible 24/7 por UTP+ Class",
     "horas": 3.0,
     "creditos": 3.00,
-    "seccion": "17738"
+    "seccion": "49913"
   },
   {
-    "nombre": "Matemática I (1X104)",
+    "nombre": "Matemática 2 (1X104)",
     "promedio": 14,
     "modalidad": "Presencial",
-    "horario": "Miércoles: 14:30-16:45, Viernes: 14:00-15:30",
+    "horario": "Martes: 12:00-14:15, Viernes: 12:15-13:45",
     "horas": 5.0,
     "creditos": 5.00,
-    "seccion": "50305"
+    "seccion": "19216"
   },
   {
-    "nombre": "Problemas y desafíos en el perú actual II (1A17E)",
+    "nombre": "Química 3  (1IN05)",
+    "promedio": 14,
+    "modalidad": "Virtual en vivo",
+    "horario": "Miércoles y Viernes: 18:30-20:00",
+    "horas": 4.0,
+    "creditos": 3.00,
+    "seccion": "43608"
+  },
+  {
+    "nombre": "Ambiente y sociedad (1AV31)",
+    "promedio": 20,
+    "modalidad": "Virtual 24/7",
+    "horario": "Disponible 24/7 por UTP+ Class",
+    "horas": 2.0,
+    "creditos": 2.00,
+    "seccion": "48284"
+  },
+  {
+    "nombre": "Ciudadanía y reflexión ética (1N07C)",
     "promedio": 17,
     "modalidad": "Virtual 24/7",
     "horario": "Disponible 24/7 por UTP+ Class",
     "horas": 3.0,
     "creditos": 3.00,
-    "seccion": "53234"
-  },
-  {
-    "nombre": "Química general II (1Q01G)",
-    "promedio": 13,
-    "modalidad": "Presencial",
-    "horario": "Miércoles y Viernes: 12:15-13:45",
-    "horas": 3.4,
-    "creditos": 2.72,
-    "seccion": "15382"
+    "seccion": "49905"
   }
 ]

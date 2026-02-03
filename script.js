@@ -40,40 +40,46 @@ async function cargarnotas() {
 
 async function generarpdf() {
     const { jsPDF } = window.jspdf;
-    let elemento = document.getElementById('reporte');
+    const pdf = new jsPDF('p', 'mm', 'a4');
+    const pdfancho = pdf.internal.pageSize.getWidth();
+    const pdfalto = pdf.internal.pageSize.getHeight();
+    const margen = 10; // Margen en mm
     
-    // Capturamos el contenido completo
-    let canvas = await html2canvas(elemento, {
-        scale: 2,
-        useCORS: true,
-        logging: false
-    });
-    
-    let imgdata = canvas.toDataURL('image/png');
-    let pdf = new jsPDF('p', 'mm', 'a4');
-    
-    let pdfancho = pdf.internal.pageSize.getWidth();
-    let pdfalto = pdf.internal.pageSize.getHeight();
-    let imgancho = canvas.width;
-    let imgalto = canvas.height;
-    
-    // Calculamos la altura de la imagen en relación al ancho del PDF
-    let raltopdf = (imgalto * pdfancho) / imgancho;
-    let altopaginaleido = 0;
+    // 1. Capturamos la cabecera (logo/periodo) por separado
+    const cabecera = document.querySelector('.flex.justify-between.items-start');
+    const canvascabecera = await html2canvas(cabecera, { scale: 2 });
+    const imgcabecera = canvascabecera.toDataURL('image/png');
+    const altocabecerapdf = (canvascabecera.height * pdfancho) / canvascabecera.width;
 
-    // Lógica para añadir páginas si el contenido es muy largo
-    while (altopaginaleido < raltopdf) {
-        let posicion = altopaginaleido * -1;
-        pdf.addImage(imgdata, 'PNG', 0, posicion, pdfancho, raltopdf);
-        altopaginaleido += pdfalto;
-        
-        // Si todavía queda contenido, añadimos una nueva página
-        if (altopaginaleido < raltopdf) {
+    // 2. Obtenemos todos los bloques de cursos
+    const bloquescursos = document.querySelectorAll('#contenidocursos > div');
+    let posiciony = margen;
+
+    // Función interna para añadir cabecera a nuevas páginas
+    const añadirheader = (y) => {
+        pdf.addImage(imgcabecera, 'PNG', 0, y, pdfancho, altocabecerapdf);
+        return y + altocabecerapdf + 5;
+    };
+
+    posiciony = añadirheader(posiciony);
+
+    for (const bloque of bloquescursos) {
+        const canvasbloque = await html2canvas(bloque, { scale: 2 });
+        const imgbloque = canvasbloque.toDataURL('image/png');
+        const altobloquepdf = (canvasbloque.height * pdfancho) / canvasbloque.width;
+
+        // ¿El curso cabe en la página actual?
+        if (posiciony + altobloquepdf > pdfalto - margen) {
             pdf.addPage();
+            posiciony = margen;
+            posiciony = añadirheader(posiciony);
         }
+
+        pdf.addImage(imgbloque, 'PNG', 0, posiciony, pdfancho, altobloquepdf);
+        posiciony += altobloquepdf;
     }
-    
-    pdf.save('Reporte_Final_UTP.pdf');
+
+    pdf.save('Reporte_Notas_UTP_Mejorado.pdf');
 }
 
 cargarnotas();

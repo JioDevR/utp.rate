@@ -1,7 +1,8 @@
 [
   {
-    "nombre": "Inglés 4 (1N08I)",
+    "nombre": "Inglés 4",
     "promedio": 15,
+    "docente": "Ausejo Sanchez, Jose Luis",
     "modalidad": "Virtual 24/7",
     "horario": "Disponible 24/7 por UTP+ Class",
     "horas": 3.0,
@@ -9,37 +10,51 @@
     "seccion": "49913"
   },
   {
-    "nombre": "Matemática 2 (1X104)",
+    "nombre": "Matemática 2",
     "promedio": 14,
+    "docente": "Muñoz Unda, Ada Jovita",
     "modalidad": "Presencial",
-    "horario": "Martes: 12:00-14:15, Viernes: 12:15-13:45",
+    "horario": "Lunes y Jueves: 12:00 - 14:15",
     "horas": 5.0,
     "creditos": 5.00,
     "seccion": "19216"
   },
   {
-    "nombre": "Química 3  (1IN05)",
+    "nombre": "Química 3",
     "promedio": 14,
-    "modalidad": "Virtual en vivo",
-    "horario": "Miércoles y Viernes: 18:30-20:00",
+    "docente": "Cutipa Adriazola, Nila Roxana",
+    "modalidad": "Presencial",
+    "horario": "Martes y Viernes: 12:00 - 14:00",
     "horas": 4.0,
     "creditos": 3.00,
     "seccion": "43608"
   },
   {
-    "nombre": "Ambiente y sociedad (1AV31)",
+    "nombre": "Laboratorio de Química 3",
+    "promedio": 15,
+    "docente": "Cutipa Adriazola, Nila Roxana",
+    "modalidad": "Presencial",
+    "horario": "Miércoles: 12:00 - 13:30",
+    "horas": 1.5,
+    "creditos": 1.00,
+    "seccion": "43609"
+  },
+  {
+    "nombre": "Ambiente y sociedad",
     "promedio": 20,
-    "modalidad": "Virtual 24/7",
-    "horario": "Disponible 24/7 por UTP+ Class",
+    "docente": "Plasencia Lescano, Jonatan Homero",
+    "modalidad": "Presencial",
+    "horario": "Lunes: 14:15 - 16:15",
     "horas": 2.0,
     "creditos": 2.00,
     "seccion": "48284"
   },
   {
-    "nombre": "Ciudadanía y reflexión ética (1N07C)",
+    "nombre": "Ciudadanía y reflexión ética",
     "promedio": 17,
-    "modalidad": "Virtual 24/7",
-    "horario": "Disponible 24/7 por UTP+ Class",
+    "docente": "Plasencia Lescano, Jonatan Homero",
+    "modalidad": "Presencial",
+    "horario": "Jueves: 14:15 - 16:00",
     "horas": 3.0,
     "creditos": 3.00,
     "seccion": "49905"
